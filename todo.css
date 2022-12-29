@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #96d3f0;
+}
+
+.container {
+    background: #32315b;
+    height: 500px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    top: 0;
+    align-items: center;
+}
+
+.nav {
+    color: aliceblue;
+    font-size: xx-large;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #f3ae24;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    align-items: center;
+}
+.name {
+    color: aliceblue;
+    font-size: xx-large;
+}
+
+.dot .name {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+hr {
+    box-shadow: #292850;
+}
+
+/*input styling*/
+
+input {
+    height: 50px;
+    width: 100%;
+    border-radius: 30px;
+    position: relative;
+    background: #292850;
+    outline: none;
+    color: white;
+    font-size: large;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+::placeholder {
+    color: aliceblue;
+    opacity: 0.5;
+}
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.add {
+    position: absolute;
+    justify-content: end;
+    margin-right: 20px;
+    font-size: xx-large;
+    color: #457db1;
+}
+
+/*To do items styling*/
+h1 {
+    font-size: large;
+    font-weight: bold;
+    color: #7c7ba1;
+}
+
+#toDoItems {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background: #44446a;
+    border-radius: 5px;
+    height: 35px;
+    margin: 10px;
+    font-size: larger;
+    color: aliceblue;
+}
+
+.item i {
+    margin: 10px;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+    color: antiquewhite;
+}
+
+.check {
+    color: #6eb200;
+}
+
+p {
+    margin: auto;
+    text-align: center;
+    color: aliceblue;
+    font-size: larger;
+}
