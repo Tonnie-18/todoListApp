@@ -1,9 +1,23 @@
 let task = document.getElementById('task');
+const items = document.getElementById('toDoItems');
+//fuuefg
 
+//theme and transitions
+document.querySelector(".icons").addEventListener("click", ()=>{
+    document.querySelector(".light-logo").classList.toggle("animate-light");
+    document.querySelector(".dark-logo").classList.toggle("animate-dark");
+    document.querySelector(".container").classList.toggle("lightBackground");
+    document.querySelector(".name").classList.toggle("nameColor");
+    document.getElementById("task").classList.toggle("inputBackground");
+    document.querySelector(".nav").classList.toggle("navColor");
+    document.querySelector(".list").classList.toggle(".itemColor");
+  });
+
+//classes
 const CHECK = 'bi-check-circle-fill';
 const UNCHECK = 'bi bi-circle';
 const LINE_THROUGH = 'lineThrough';
-const items = document.getElementById('toDoItems');
+
 
 let id;
 let LIST = [];
@@ -45,6 +59,23 @@ function addToDo(toDo, id, done, trash) {
     items.insertAdjacentHTML(position, text);
 }
 
+//adding item to the list when user clicks the plus icon
+function appendToDo(){
+    const toDo=task.value;
+    if(toDo){
+      addToDo(toDo , id,false, false);
+      LIST.push({
+        name:toDo,
+        id:id,
+        done:false,
+        trash:false
+      });
+      //add Item to local storage
+      localStorage.setItem("TODO", JSON.stringify(LIST));
+      id++;
+    }
+    task.value="";
+};
 //adding item to the list when user clicks enter
 
 document.addEventListener('keyup', function (event) {

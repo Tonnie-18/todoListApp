@@ -4,11 +4,14 @@
 
 body {
     background: #96d3f0;
+    transition: background-color 1s;
 }
+
+
 
 .container {
     background: #32315b;
-    height: 500px;
+    height: 90vh;
     width: 100%;
 }
 
@@ -25,25 +28,45 @@ body {
     font-size: xx-large;
 }
 
-.dot {
-    height: 15px;
-    width: 15px;
-    background-color: #f3ae24;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 6px;
-    align-items: center;
-}
-.name {
-    color: aliceblue;
-    font-size: xx-large;
-}
-
-.dot .name {
+.themeAndName{
     display: flex;
     align-items: center;
     justify-content: end;
 }
+
+
+
+.name {
+    color: aliceblue;
+    font-size: xx-large;
+    margin: 10px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.icons{
+    position: relative;
+}
+
+.dark,.light{
+    width: fit-content;
+    height: fit-content;
+}
+
+.light{
+    color: white;
+    font-size: x-large;
+}
+.dark{
+    position: absolute;
+    font-size: x-large;
+    inset: 0;
+}
+
 
 hr {
     box-shadow: #292850;
@@ -57,12 +80,13 @@ input {
     border-radius: 30px;
     position: relative;
     background: #292850;
-    outline: none;
+    border: none;
     color: white;
     font-size: large;
     margin-left: 10px;
     padding-left: 10px;
 }
+
 
 ::placeholder {
     color: aliceblue;
@@ -89,9 +113,26 @@ h1 {
     color: #7c7ba1;
 }
 
+.listItems{
+    height: 40vh;
+}
+
+.list {
+    height:20vh;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: blue, white;
+}
+
+#completeTasks{
+    height: 40vh;
+    overflow:auto;
+}
 #toDoItems {
     margin-bottom: 0;
     padding-left: 0;
+    overflow: auto;
+    height:auto;
 }
 
 .item {
@@ -125,4 +166,61 @@ p {
     text-align: center;
     color: aliceblue;
     font-size: larger;
+}
+
+
+/* themes css styling */
+
+.lightBackground{
+    background: #f2f2f2;
+}
+
+.nameColor{
+    color:#292850;
+}
+
+.inputBackground{
+    background: #b8c3cb;
+    color: #292850;
+    outline: none;
+}
+
+.itemColor{
+    color:#44446a;
+    background:#ECF1F5;
+}
+
+.navColor{
+    color: #292850;
+}
+
+.dark-logo{
+    opacity: 0;
+    transform: translateY(0%)rotateZ('50deg');
+    transition: all 1s ease-out;
+}
+
+.light-logo{
+    opacity: 1;
+    transform: translateY(0)rotateZ('0deg');
+    transition: all 1s ease-out;
+
+}
+
+.animate-light{
+    opacity: 0;
+    transform: translateY(0%)rotateZ('100deg');
+}
+
+.animate-dark{
+    opacity: 1;
+    transform: translateY(0)rotateZ('0deg');
+}
+
+.animate-dark path{
+    fill: white;
+}
+
+.animate-light path{
+    fill: white;
 }
